@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+Profile Page
+{% endblock title %}
+
+{% block body %}
+
+<section id = "portfolioclass" class ="portfolio">
+<div class="container">
+<h1></h1>
+
+<table class = "table table-danger table-striped">
+<thead>
+<tr>
+<th scope = "col">Order ID</th>
+<th scope = "col">Name</th>
+<th scope = "col">Products</th>
+<th scope = "col">Amount Paid</th>
+<th scope = "col">Payment Status</th>
+<th scope = "col">Adress</th>
+<th scope = "col">Phone Number</th>
+<th scope = "col">Delhivery Status</th>
+<th scope = "col">Delivered</th>
+
+</tr>
+</thead>
+<tbody>
+{% for i in items %}
+<tr>
+<th scope "row"><{{i.oid}}</th>
+<td> {{i.name}} </td>
+<td>{{i.items_json}} </td>
+<td>{{i.amount}} </td>
+<td> {{i.paymentstatus}}</td>
+<td> {{i.address1}}</td>
+<td> {{i.phone}}</td>
+<td> {{i.name}}</td>
+<td> {{i.name}}</td>
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+</div>
+</section>
+<h1>My Profile</h1>
+{% endblock body %}
